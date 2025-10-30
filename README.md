@@ -18,6 +18,11 @@ O pipeline em `.github/workflows/deploy.yml` publica automaticamente o conteúdo
 
 Após o primeiro build no GitHub Actions, habilite o Pages apontando para **GitHub Actions** nas configurações do repositório.
 
+## Publicação em domínio próprio
+- Requisitos: DNS configurado conforme [DEPLOY_DNS.md](DEPLOY_DNS.md).
+- Build e deploy automáticos executados em cada push para `main` com GitHub Pages.
+- Ambientes filhos por subdomínio (staging, app, docs, blog) compartilham o mesmo deploy e têm rotas dedicadas `/status`, `/docs` e `/blog`.
+
 ## Estrutura
 ```
 ├── public/              # Arquivos estáticos (favicon, manifest, robots)

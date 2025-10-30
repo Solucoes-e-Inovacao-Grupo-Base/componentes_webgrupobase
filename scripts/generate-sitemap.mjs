@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const routes = ["/", "/about", "/services", "/contact"];
+const routes = ["/", "/about", "/services", "/contact", "/status", "/docs", "/blog"];
 
 const getRepoInfo = () => {
   if (process.env.GITHUB_REPOSITORY) {

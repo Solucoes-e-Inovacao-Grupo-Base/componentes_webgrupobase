@@ -14,8 +14,15 @@ const Home = () => {
     });
   }, []);
 
+  const envName = (window as any).__ENV__?.name ?? "prod";
+
   return (
     <div className="space-y-20 pb-20">
+      <div className="flex justify-center pt-4">
+        <span className="rounded-full border border-primary-500/50 bg-primary-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary-200">
+          Ambiente: {envName}
+        </span>
+      </div>
       <Hero />
       <section id="servicos" className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="mb-10 space-y-4 text-center md:text-left">
