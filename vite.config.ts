@@ -37,7 +37,11 @@ const getRepoName = (): string => {
 const repoName = getRepoName();
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES ? `/${repoName}/` : "/",
+  base: process.env.CUSTOM_DOMAIN
+    ? "/"
+    : process.env.GITHUB_PAGES
+      ? `/${repoName}/`
+      : "/",
   plugins: [react()],
   resolve: {
     alias: {

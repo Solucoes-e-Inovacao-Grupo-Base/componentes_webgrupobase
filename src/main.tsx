@@ -3,6 +3,10 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
+import { envFromHost, cfg } from "./environments/map";
+
+const ENV = envFromHost(window.location.hostname);
+(window as any).__ENV__ = cfg(ENV);
 
 const router = createHashRouter(
   [
@@ -25,6 +29,18 @@ const router = createHashRouter(
         {
           path: "contact",
           lazy: () => import("./pages/Contact").then((module) => ({ Component: module.default }))
+        },
+        {
+          path: "status",
+          lazy: () => import("./pages/Status").then((module) => ({ Component: module.default }))
+        },
+        {
+          path: "docs",
+          lazy: () => import("./pages/Docs").then((module) => ({ Component: module.default }))
+        },
+        {
+          path: "blog",
+          lazy: () => import("./pages/Blog").then((module) => ({ Component: module.default }))
         }
       ]
     }
