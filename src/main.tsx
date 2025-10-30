@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
@@ -28,8 +28,7 @@ const router = createBrowserRouter(
         }
       ]
     }
-  ],
-  { basename: import.meta.env.BASE_URL }
+  ]
 );
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
