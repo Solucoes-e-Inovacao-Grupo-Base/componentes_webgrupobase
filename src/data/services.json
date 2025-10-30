@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Design System unificado",
+    "description": "Estrutura modular com tokens e componentes prontos para manter a consistência visual em todos os produtos do Grupo Base."
+  },
+  {
+    "id": 2,
+    "title": "Biblioteca de componentes",
+    "description": "Coleção extensa de componentes React com acessibilidade AA e suporte a temas claros e escuros."
+  },
+  {
+    "id": 3,
+    "title": "Consultoria de performance",
+    "description": "Auditorias Lighthouse e otimizações contínuas para atingir notas acima de 90 em projetos web."
+  },
+  {
+    "id": 4,
+    "title": "Integração contínua",
+    "description": "Pipelines automatizados com GitHub Actions para validar, testar e publicar aplicações em minutos."
+  }
+]

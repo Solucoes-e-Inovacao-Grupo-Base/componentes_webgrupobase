@@ -1,0 +1,41 @@
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import App from "./App";
+import "./index.css";
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          index: true,
+          lazy: () => import("./pages/Home").then((module) => ({ Component: module.default }))
+        },
+        {
+          path: "about",
+          lazy: () => import("./pages/About").then((module) => ({ Component: module.default }))
+        },
+        {
+          path: "services",
+          lazy: () => import("./pages/Services").then((module) => ({ Component: module.default }))
+        },
+        {
+          path: "contact",
+          lazy: () => import("./pages/Contact").then((module) => ({ Component: module.default }))
+        }
+      ]
+    }
+  ],
+  { basename: import.meta.env.BASE_URL }
+);
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center text-lg">Carregando...</div>}>
+      <RouterProvider router={router} />
+    </Suspense>
+  </React.StrictMode>
+);
