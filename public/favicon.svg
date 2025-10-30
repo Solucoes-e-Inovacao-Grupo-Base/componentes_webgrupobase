@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Grupo Base</title>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#597eff" />
+      <stop offset="100%" stop-color="#1e2c7d" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#grad)" />
+  <path
+    d="M20 18h14c6.5 0 11 4 11 10 0 4.6-2.6 8-6.7 9.3L47 46H39l-7-7h-4v7h-8V18Zm14 14c2.4 0 4-1.4 4-3.4S36.4 25 34 25h-6v7h6Z"
+    fill="#ffffff"
+  />
+</svg>
